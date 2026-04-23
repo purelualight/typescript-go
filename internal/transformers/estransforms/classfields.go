@@ -608,7 +608,7 @@ func (tx *classFieldsTransformer) visitExportAssignment(node *ast.ExportAssignme
 	//     ...
 
 	// NOTE: Since emit for `export =` translates to `module.exports = ...`, the assigned name of the class
-	// is ``.
+	// is `""`.
 
 	if isNamedEvaluationAnd(tx.EmitContext(), node.AsNode(), tx.isAnonymousClassNeedingAssignedName) {
 		assignedName := ""
